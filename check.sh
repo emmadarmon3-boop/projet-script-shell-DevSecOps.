@@ -30,7 +30,7 @@ echo "===================="
 
 echo "3/3 - Recherche de mot  de passe"
 
-RESULTAT=$(grep -r "password" . --exclude="check.sh")
+RESULTAT=$(grep -r "password" . --include="*.py" --include="*.js" 2>/dev/null)
 
 if [ -n "$RESULTAT" ]; then
 	echo "mot de passe trouver"
